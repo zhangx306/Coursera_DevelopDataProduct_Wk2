@@ -1,0 +1,69 @@
+---
+title: "Week 21 Rmarkdown Presentation"
+author: "Xing Zhang"
+date: "September 19, 2018"
+output:
+  ioslides_presentation: default
+  beamer_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+## My first slide
+Some content
+
+***
+My second slide does not have a title
+
+## My third slide
+### top level subheading
+#### second level subheading
+
+## My forth slide
+- bullet one
+- bullet two
+
+1. item one
+2. item two
+
+## Formating
+plain text
+
+*italicized text*
+
+**bold text**
+
+`for (i %in% 1:10)`
+
+## Code
+```{r }
+head(mtcars)
+```
+
+## Code, remove comment
+```{r, comment = "" }
+head(mtcars)
+```
+
+## Code, echo = T to show code
+```{r, echo=T }
+head(mtcars)
+```
+
+## Code, eval = F to hide result and only show code
+```{r, echo=T, eval = F }
+head(mtcars)
+```
+
+## Plot
+```{r, echo = T}
+plot(mtcars$wt, mtcars$mpg, xlab = "Weight", ylab = "MPG")
+
+```
+
+## Plot, adding figure options
+```{r, echo = T, fig.align="center", fig.cap="caption"}
+plot(mtcars$wt, mtcars$mpg, xlab = "Weight", ylab = "MPG")
+
+```
